@@ -1,0 +1,131 @@
+.footer-container>.text {
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    background-color: #fff;
+}
+
+.footer-container>.text>h1>span {
+    color: #40ff00;
+    font-size: 30px;
+}
+
+.footer-lists {
+    /* padding: 0 3vw; */
+    width: 100%;
+    display: flex;
+}
+
+.footer-lists>.left-footer {
+    width: 50%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vw;
+
+}
+
+.social-icons {
+    margin-left: 5vw;
+}
+
+.footer-lists>.left-footer>.social-icons>a {
+    font-size: 2.5vw;
+    margin-inline: 1vw;
+    padding: 0.5vw;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-lists>.left-footer>.social-icons>a>i:hover {
+    cursor: pointer;
+
+    box-shadow: 2px 2px 4px rgba(60, 60, 255, 0.5),
+        -2px -2px 4px rgba(178, 255, 63, 0.5),
+        0 0 8px rgba(110, 110, 110, 0.8);
+    border-radius: 50%;
+    padding: 0.5vw;
+}
+
+.footer-lists>.right-footer {
+    width: 50%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-lists>.right-footer>.about>ul {
+    list-style-type: none;
+    font-size: 18px;
+
+}
+
+.a-link {
+    text-decoration: none;
+}
+
+.a-link>li {
+    margin-block: 0.9vw;
+    cursor: pointer;
+    color: #000;
+}
+
+.a-link>li:hover {
+    text-decoration: underline;
+}
+
+.footer-container>p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .footer-lists {
+        flex-direction: column;
+    }
+
+    .footer-lists>.left-footer,
+    .footer-lists>.right-footer {
+        width: 100%;
+        margin-top: 3vw;
+    }
+
+    .footer-lists>.left-footer {
+        order: 2;
+    }
+
+    .footer-lists>.right-footer {
+        order: 1;
+    }
+
+    .footer-lists>.right-footer>.about {
+        text-align: center;
+    }
+
+    .footer-lists>.right-footer>.about>ul>li {
+        margin-block: 1.5vw;
+    }
+
+    .footer-lists>.left-footer>.social-icons {
+        text-align: center;
+        margin: 2vw 0;
+    }
+
+    .footer-lists>.left-footer>.social-icons>a {
+        font-size: 4vw;
+        margin-inline: 2vw;
+        padding: 1vw;
+    }
+
+    .footer-lists>.left-footer>.social-icons>a>i:hover {
+        padding: 1vw;
+    }
+}

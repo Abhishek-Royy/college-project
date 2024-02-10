@@ -1,0 +1,93 @@
+.two-grid {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    background: url("/images/background.jpg");
+    margin-top: 2vw;
+}
+
+.login-image{
+    width: 50%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8vw;
+    border-radius: 10px;
+   background-color: #4c4c4c27;
+    background-position: center;
+    background-size: cover;
+    color: #000;
+}
+
+.login-form>form {
+    width: 35vw;
+    height: 18vw;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+
+.btn-submit {
+    width: 20vw;
+    padding: 0.8vw;
+    font-size: 19px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #009dff;
+    color: #fff;
+    
+}
+
+.btn-submit:active {
+    scale: 0.96;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .two-grid {
+        flex-direction: column; /* Change the layout to a single column */
+    }
+
+    .login-image,
+    .login-form {
+        width: 100%; /* Make both sections take up the full width */
+    }
+
+    .login-image {
+        order: 2; /* Change the order to display the image after the form */
+    }
+
+    .login-form {
+        margin-top: 4vw; /* Adjust margin for better spacing */
+        border-radius: 0; /* Remove border-radius for a different look */
+    }
+
+    .login-form>form {
+        width: 80%; /* Adjust form width */
+        height: auto; /* Let the form height adjust based on content */
+    }
+
+    .btn-submit {
+        width: 70%; /* Adjust button width */
+        padding: 10px; /* Adjust padding */
+        font-size: 16px; /* Adjust font size */
+    }
+}

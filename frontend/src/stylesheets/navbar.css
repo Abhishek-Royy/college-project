@@ -1,0 +1,139 @@
+.container{
+     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7vw;
+    height: 4.5vw;
+    margin-top: 0.5vw;
+  
+}
+
+.container>nav>ul{
+    display: flex;
+    gap: 6vw;
+    color: #000;
+}
+
+.container>nav>ul>li{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-tag{
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-tag {
+    display: inline-block;
+    position: relative;
+    color: #012232;
+  }
+  
+  .nav-tag::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .nav-tag:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+
+
+
+/* .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-brand img {
+  max-width: 100%;
+  height: auto;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #0087ca;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+Media query for screens with a maximum width of 600px 
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-icon.open .dot:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .menu-icon.open .dot:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open .dot:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+} */

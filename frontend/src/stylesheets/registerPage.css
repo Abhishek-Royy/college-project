@@ -1,0 +1,128 @@
+
+.two-grid {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.grid {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    margin-top: 0vw;
+}
+
+.registration-image {
+    width: 50%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-form {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4vw;
+    border-radius: 10px;
+    background:rgba(74, 74, 74, 0.128);
+    color: #000;
+}
+
+.registration-form>form {
+    width: 35vw;
+    height: max-content;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+form>div {
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-block: 0.5vw;
+}
+
+form>div>input {
+    width: 80%;
+    padding: 0.8vw;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #dadada;
+}
+
+form>div>label {
+
+    margin-left: 2vw;
+}
+
+.btn-submit {
+    width: 50%;
+    padding: 0.8vw;
+    font-size: 19px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-submit:active {
+    scale: 0.96;
+}
+
+.tag {
+    margin-block: 0.5vw;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+.tag:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .two-grid {
+        flex-direction: column;
+    }
+
+    .registration-image {
+        width: 100%;
+    }
+
+    .registration-form {
+        width: 100%;
+        margin-top: 4vw;
+        /* Adjust margin for smaller screens */
+        border-radius: 0;
+        /* Modify border radius as needed */
+    }
+
+    .registration-form>form {
+        width: 80%;
+        /* Adjust form width for smaller screens */
+    }
+
+    form>div>input {
+        width: 100%;
+        /* Full width inputs */
+        margin-left: 0;
+        /* Remove left margin for inputs */
+    }
+}
+

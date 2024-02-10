@@ -1,0 +1,90 @@
+
+** CONTROLLERS:
+    controllers are typically used to process incomng request. And the incoming request coming from route dom.the incoming request interect with data models and send response back to the client.
+
+** If we want to add something in DataBase:
+    we need to use 'post' method.
+    by using 'post' method we add/send the data into the DtaBase.
+
+** SOME POSTMAN method to post the data by 'req.body' method:
+    * i In postman application- select 'post' method,
+    * then in Header section ->
+        Key : content-Type
+        Value: application/json
+    * in Body section ->
+        select Raw
+        select json
+    * in server file, use the middleware- app.use(express.json());
+    * atlast enter send and all done..
+    * req.body  <- is most importent to get the all userinput body data.
+
+
+** CONNECT DATABASE(MongoDb Compass) WITH BACKEND:
+    db.js & server.js code is the example of make connection with Compass.
+
+** .env:
+    dotenv packege install first
+    It is environment variable to secure our data.
+
+    require("dotenv").config();     <= very importent to use .env file in our code.
+
+** Set connection with mongoDB atlas:
+    ~ in atlas create a project
+    ~ go to create
+    ~ set database name and set username and password
+    ~ set the IP address: 0.0.0.0/0 
+    ~ after that connect it with backend.
+    ~ the connection process will be shown in 'db.js & .env file'
+    ~ .env file is most importent to secure our sensitive information.
+
+
+** MODEL AND SCHEMA + STORE THE DATA IN DB 
+    ~ model schema means- which which data field we want to add in our database..
+    ~ const schemaName=new mongoose.Schema({})  <- this code is used to create Schema.
+    ~ others code check in 'user.model.js'..
+
+
+**  SECURE PASSWORD USING BCRYPT:
+    ~ at first we need to install the 'bcrypt' packege,
+    ~ set the hashCodeRound
+    ~ set the hash password coding.
+    ~   const hashCodeRound = 10;
+        const hashPassword = await bcrypt.hash(password, hashCodeRound);
+    ~ check the 'auth.controllers.js' file
+
+
+** JSON web Token (JWT):
+    ~ JWT handel basically two things ->
+                Authentication = Verifying the identity of a user.
+                Authorization = after identifying give them the access what action does they do.
+    
+    ~ Components of JWT ->
+            Header = content metadata about the token.
+            Payload = contains claims or statement about an entity and another additional data.
+            Signature = it is a secret value that only know the server.
+        -> or so many things are available 
+        
+-----------------------------------------------------------------------------------------------------
+
+** Zod Validation:
+    const validate = (schema) => async (req, res, next) => {
+  try {
+    const parseBody = await schema.parseAsync(req.body);
+    req.body = parseBody;
+    next();
+  } catch (err) {
+    const message = err.errors[0].message;
+    console.log(message);
+    res.status(400).json({ msg: message });
+  }
+};
+
+module.exports = validate;
+<< this code is define all the validation limit and all the conditions. Which are Given in 'auth.validator.js' file.. All are linked with each other..
+
+
+---------------------------------------------------------------------------
+
+
+
+
